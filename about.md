@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "About Me: Logan Chavez"
 ---
 
 ## Background
@@ -13,7 +13,7 @@ Write a brief introduction about yourself here. Include:
 
 ## Education
 
-- **[Human Resources Management, Minor Statistics]** - [Brigham Young University], [2026]
+- **[Major - Human Resources Management, Minor - Statistics]** - [Brigham Young University], [2026]
 - **Relevant Coursework**: Statistical Modeling, HRM Implementation, The Data Science Process, ...
 
 ## Skills & Interests
