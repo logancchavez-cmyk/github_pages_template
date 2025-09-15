@@ -6,15 +6,15 @@ title: "About Me"
 
 Write a brief introduction about yourself here. Include:
 
-- Your academic background
-- Your interest in data science
-- Your career goals
-- Any relevant experience or projects
+- I am currently a Senior in the Human Resources Management Program at BYU with a minor in Statistics
+- My interest in data science originates from my interest in People Anlytics as a whole
+- I qould love to sit in an advanced people analytics team using my HR background to inform smart data decisions
+- Michelin Star Project
 
 ## Education
 
-- **[Your Degree]** - [University Name], [Year]
-- **Relevant Coursework**: Statistics, Data Analysis, Programming, etc.
+- **[Human Resources Management, Minor Statistics]** - [Brigham Young University], [2026]
+- **Relevant Coursework**: Statistical Modeling, HRM Implementation, The Data Science Process, ...
 
 ## Skills & Interests
 
@@ -26,8 +26,8 @@ Write a brief introduction about yourself here. Include:
 - **Tools**: Jupyter Notebooks, Git/GitHub
 
 ### Areas of Interest
-- [Your specific interests, e.g., environmental data, healthcare analytics, finance, etc.]
-- [Other areas you're curious about]
+- [People Analytics]
+- [Cooking yummy food haha]
 
 ## Goals
 
@@ -39,9 +39,9 @@ Describe what you hope to achieve through your data science journey:
 
 ## Contact
 
-- **Email**: your.email@example.com
-- **GitHub**: [github.com/your-username](https://github.com/your-username)
-- **LinkedIn**: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
+- **Email**: Logancchavez@icloud.com
+- **GitHub**: [github.com/logancchavez-cmyk](https://github.com/logancchavez-cmyk)
+- **LinkedIn**: [linkedin.com/in/loganchavez](https://linkedin.com/in/loganchavez)
 
 ---
 
