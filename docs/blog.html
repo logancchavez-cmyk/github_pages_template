@@ -247,7 +247,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Collecting data is an important first step in using data science principles to analyze a business problem. Large data quantity and high data quality are great goals to strive for when collecting data to produce the best results after analysis. For the purposes of this tutorial I will be selecting a dataset from <a href="https://www.kaggle.com/">Kaggle.com</a>, a popular platform in the data science community, to show my analysis process end-to-end.</p>
 <p>The <a href="https://www.kaggle.com/datasets/HRAnalyticRepository/employee-attrition-data">dataset</a> I chose contains fictitious data on terminations over ten years, showing both employees that are active and those that terminated. There are 18 columns or attributes we can work with including: employee age, employee tenure, employee number, employee status, departure reason, etc. I downloaded it into my project folder as <code>MFG10YearTerminationData.csv</code> and opened it within VS Code (my preferred IDE, although any will work).</p>
 <p>Let’s <code>import pandas</code> as <code>pd</code> and <code>from matplotlib import pyplot</code> as <code>plt</code> in our main file to get started, and use <code>pd.read_csv()</code> read our CSV into a DataFrame by running the code below.</p>
-<div id="8d1bcae3" class="cell" data-code-fold-show="false" data-execution_count="1">
+<div id="fe4b1d8a" class="cell" data-code-fold-show="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Getting Started</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -257,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>Check to make sure your data was read in correctly by using some quick summarization commands like <code>.head()</code>, <code>.describe()</code>, or <code>.info()</code> to get a general view of your data and perform some preliminary validation before analysis. These commands will return the first X rows of data, give general statistics about the “age” column, and give a concise description of the data frame respectively. I chose <code>.describe()</code> to check if the numbers seemed off or not at first glance.</p>
-<div id="815e2ee8" class="cell" data-code-fold-show="false" data-execution_count="2">
+<div id="423d802b" class="cell" data-code-fold-show="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Quick Spot Check</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>attrit_df[<span class="st">"age"</span>].describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -281,7 +281,7 @@ Name: age, dtype: float64</code></pre>
 <h1>Step 2. Preparing Data</h1>
 <p>Getting the data ready to be analyzed is almost as important as the analysis itself! Working with incorrect or incomplete data can render any insights practically useless, so it’s important to take time to ensure your data is ready to be manipulated before jumping in. While every data set is different, it is always good to identify attributes/column of interest, clarify column names, drop duplicate rows, and identify missing/incorrect data. Below are several examples of how to evaluate the quality of your data.</p>
 <p>Using commands like <code>.strip</code>, <code>.lower</code>, and <code>.replace</code> can help us create more uniform column names. <code>pd.to_datetime</code> converts the dates to the correct data type to ensure they work properly. The last line creates a new column returning <code>True</code> or <code>False</code> if the employee has been terminated, and converts those booleans into a binary column using <code>.astype(int)</code> that will help us calculate attrition later.</p>
-<div id="554dd903" class="cell" data-code-fold-show="false" data-execution_count="3">
+<div id="5da3b1d3" class="cell" data-code-fold-show="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Data Preparation</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>attrit_df.columns <span class="op">=</span> [c.strip().lower().replace(<span class="st">" "</span>, <span class="st">"_"</span>) <span class="cf">for</span> c <span class="kw">in</span> attrit_df.columns]</span>
@@ -306,7 +306,7 @@ Name: age, dtype: float64</code></pre>
 <section id="what-is-the-overall-attrition-rate" class="level3">
 <h3 class="anchored" data-anchor-id="what-is-the-overall-attrition-rate">3.1 What is the overall attrition rate?</h3>
 <p>We can do a simple overall attrition calculation by counting all of the rows of data containing terminated employees and dividing that by the total number of rows in our data set. Using <code>.mean()</code> will quickly do this. I then printed the number and converted it into a percentage.</p>
-<div id="1c8923f1" class="cell" data-code-fold-show="false" data-execution_count="4">
+<div id="a098b54d" class="cell" data-code-fold-show="false" data-execution_count="4">
 <details class="code-fold">
 <summary>Calculate Overall Attrition</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>overall_rate <span class="op">=</span> attrit_df[<span class="st">"is_terminated"</span>].mean()</span>
@@ -320,7 +320,7 @@ Name: age, dtype: float64</code></pre>
 <section id="do-other-apartments-attrit-more-than-others" class="level3">
 <h3 class="anchored" data-anchor-id="do-other-apartments-attrit-more-than-others">3.2 Do other apartments attrit more than others?</h3>
 <p>Again we can use <code>.mean()</code> to calculate the attrition percent, but this time we will group the percentages by department using <code>.groupby()</code>.</p>
-<div id="cbc3b311" class="cell" data-code-fold-show="false" data-execution_count="5">
+<div id="2ae114da" class="cell" data-code-fold-show="false" data-execution_count="5">
 <details class="code-fold">
 <summary>Calculate Attrition by Department</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dept_rate <span class="op">=</span> attrit_df.groupby(<span class="st">"department_name"</span>)[<span class="st">"is_terminated"</span>].mean().sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
@@ -345,7 +345,7 @@ Name: is_terminated, dtype: float64</code></pre>
 <section id="does-tenure-relate-to-attrition" class="level3">
 <h3 class="anchored" data-anchor-id="does-tenure-relate-to-attrition">3.3 Does tenure relate to attrition?</h3>
 <p>Here we are looking at Tenure and Attrition to see if we can find any insights there. We created bins and labels and then used them with the <code>.cut()</code> function to look at tenure (a continuous variable) as if it were discrete.</p>
-<div id="8d645291" class="cell" data-code-fold-show="false" data-message="false" data-execution_count="6">
+<div id="a389e443" class="cell" data-code-fold-show="false" data-message="false" data-execution_count="6">
 <details class="code-fold">
 <summary>Calculate Attrition by Tenure</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">60</span>]</span>
@@ -370,7 +370,7 @@ Name: is_terminated, dtype: float64</code></pre>
 <section id="how-old-are-those-who-attrit" class="level3">
 <h3 class="anchored" data-anchor-id="how-old-are-those-who-attrit">3.4 How old are those who attrit?</h3>
 <p>Again, we are using the <code>.cut()</code> to look into another angle. This time is age and attrition.</p>
-<div id="2ab2f4f8" class="cell" data-code-fold-show="false" data-message="false" data-execution_count="7">
+<div id="d8456e3b" class="cell" data-code-fold-show="false" data-message="false" data-execution_count="7">
 <details class="code-fold">
 <summary>Calculate Attrition by Age</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>age_bins <span class="op">=</span> [<span class="dv">16</span>,<span class="dv">25</span>,<span class="dv">35</span>,<span class="dv">45</span>,<span class="dv">55</span>,<span class="dv">65</span>,<span class="dv">100</span>]</span>
@@ -400,7 +400,7 @@ Name: is_terminated, dtype: float64</code></pre>
 <p>Sometimes visualizing data this way can make it easier to spot trends in the data rather than just reading it. All of the visualizations below use the data above to look at attrition from various angles like department, tenure, and age. Open the code chucnks to see what code is run to output the visualization.</p>
 <section id="attrition-by-department-bar" class="level3">
 <h3 class="anchored" data-anchor-id="attrition-by-department-bar">4.1 Attrition by department (bar)</h3>
-<div id="0a5a6ce5" class="cell" data-code-fold-show="false" data-execution_count="8">
+<div id="7860ce27" class="cell" data-code-fold-show="false" data-execution_count="8">
 <details class="code-fold">
 <summary>Attrition by Dept Bar Chart</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
@@ -422,7 +422,7 @@ Name: is_terminated, dtype: float64</code></pre>
 </section>
 <section id="attrition-by-tenure-band-bar" class="level3">
 <h3 class="anchored" data-anchor-id="attrition-by-tenure-band-bar">4.2 Attrition by tenure band (bar)</h3>
-<div id="245e62a6" class="cell" data-code-fold-show="false" data-execution_count="9">
+<div id="89954625" class="cell" data-code-fold-show="false" data-execution_count="9">
 <details class="code-fold">
 <summary>Attrition by Tenure Bar Chart</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
@@ -444,7 +444,7 @@ Name: is_terminated, dtype: float64</code></pre>
 </section>
 <section id="attrition-by-age-band-bar" class="level3">
 <h3 class="anchored" data-anchor-id="attrition-by-age-band-bar">4.3 Attrition by age band (bar)</h3>
-<div id="0a6ed442" class="cell" data-code-fold-show="false" data-execution_count="10">
+<div id="8083a210" class="cell" data-code-fold-show="false" data-execution_count="10">
 <details class="code-fold">
 <summary>Attrition by Age Bar Chart</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
@@ -482,7 +482,7 @@ Name: is_terminated, dtype: float64</code></pre>
 </section>
 <section id="call-to-action" class="level1">
 <h1>Call to Action:</h1>
-<p>Visit this <a href="https://www.kaggle.com/">site</a> and find an employee dataset that interests you! Follow the steps above to calculate and visualize attrition. Have fun! <code>:)</code></p>
+<p>Visit this <a href="https://www.kaggle.com/">site</a> and find an employee dataset that interests you! Follow the steps above to calculate and visualize attrition. Have fun!! Here is a smiley face for you. <img src="download.png" class="img-fluid" alt="smiley face"></p>
 
 
 <!-- -->
@@ -1145,7 +1145,7 @@ Name: is_terminated, dtype: float64</code></pre>
 <span id="cb16-222"><a href="#cb16-222" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-223"><a href="#cb16-223" aria-hidden="true" tabindex="-1"></a><span class="fu"># Call to Action:</span></span>
 <span id="cb16-224"><a href="#cb16-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-225"><a href="#cb16-225" aria-hidden="true" tabindex="-1"></a>Visit this <span class="co">[</span><span class="ot">site</span><span class="co">](https://www.kaggle.com/)</span> and find an employee dataset that interests you! Follow the steps above to calculate and visualize attrition. Have fun! <span class="in">`:)`</span></span>
+<span id="cb16-225"><a href="#cb16-225" aria-hidden="true" tabindex="-1"></a>Visit this <span class="co">[</span><span class="ot">site</span><span class="co">](https://www.kaggle.com/)</span> and find an employee dataset that interests you! Follow the steps above to calculate and visualize attrition. Have fun!! Here is a smiley face for you. <span class="al">![smiley face](download.png)</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
