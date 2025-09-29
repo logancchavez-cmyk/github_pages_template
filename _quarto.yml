@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - download.png
 
 website:
   title: "Your Name - Data Science Portfolio"
