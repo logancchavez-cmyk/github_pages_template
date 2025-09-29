@@ -202,4 +202,4 @@ As you can see, following these simple data science steps to load, prepare, and 
 
 # Call to Action:
 
-Visit this [site](https://www.kaggle.com/) and find an employee dataset that interests you! Follow the steps above to calculate and visualize attrition. Have fun! `:)`
+Visit this [site](https://www.kaggle.com/) and find an employee dataset that interests you! Follow the steps above to calculate and visualize attrition. Have fun! ![smiley face](download.png)
