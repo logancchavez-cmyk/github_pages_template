@@ -2,9 +2,11 @@
 title: "Welcome to My Data Science Portfolio"
 ---
 
-# Hello! I'm [Your Name] 👋
+# Hello! I'm Logan Chavez 👋
 
-Welcome to my data science portfolio! This site shows my journey learning data science and analytics. Here you'll find projects that demonstrate what I've learned and discovered.
+Intro: Welcome to my data science portfolio! This site shows some of the work I have been doing lately trying to hone my DS skills. I am interested in People Analytics and currently seeking jobs in the field. My background is in HR and I love using data so solve complex organizational issues relating to employees. I hope you enjoy!
+
+Purpose: The purpose of this blog is to help you understand my current working skills and better understand some of my interests. 
 
 ## 🎓 About This Portfolio
 
