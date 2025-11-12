@@ -36,13 +36,13 @@ If someone wanted to replicate this project, they’d just need to follow the pr
 
 # EDA with Fats and Oils
 
-**Final Dataset Information:**
+## Final Dataset Information:
 
 * Total Observations: 214
 * Categorical Variables: 2
 * Numerical variables: 8
 
-**EDA Visuals:**
+## EDA Visuals:
 ![Bad Fats Compared](bad_fats.png)
 ![Good Fats Compared](good_fats.png)
 ![Kilojules Compared](kilojules.png)

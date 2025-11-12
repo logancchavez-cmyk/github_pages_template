@@ -236,7 +236,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#motivating-question" id="toc-motivating-question" class="nav-link" data-scroll-target="#motivating-question">Motivating Question:</a></li>
   <li><a href="#api-ethics-and-considerations" id="toc-api-ethics-and-considerations" class="nav-link" data-scroll-target="#api-ethics-and-considerations">API Ethics and Considerations</a></li>
   <li><a href="#api-methodology" id="toc-api-methodology" class="nav-link" data-scroll-target="#api-methodology">API Methodology</a></li>
-  <li><a href="#eda-with-fats-and-oils" id="toc-eda-with-fats-and-oils" class="nav-link" data-scroll-target="#eda-with-fats-and-oils">EDA with Fats and Oils</a></li>
+  <li><a href="#eda-with-fats-and-oils" id="toc-eda-with-fats-and-oils" class="nav-link" data-scroll-target="#eda-with-fats-and-oils">EDA with Fats and Oils</a>
+  <ul class="collapse">
+  <li><a href="#final-dataset-information" id="toc-final-dataset-information" class="nav-link" data-scroll-target="#final-dataset-information">Final Dataset Information:</a></li>
+  <li><a href="#eda-visuals" id="toc-eda-visuals" class="nav-link" data-scroll-target="#eda-visuals">EDA Visuals:</a></li>
+  </ul></li>
   <li><a href="#useful-links" id="toc-useful-links" class="nav-link" data-scroll-target="#useful-links">Useful Links</a></li>
   </ul>
 </nav>
@@ -296,19 +300,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="eda-with-fats-and-oils" class="level1">
 <h1>EDA with Fats and Oils</h1>
-<p><strong>Final Dataset Information:</strong></p>
+<section id="final-dataset-information" class="level2">
+<h2 class="anchored" data-anchor-id="final-dataset-information">Final Dataset Information:</h2>
 <ul>
 <li>Total Observations: 214</li>
 <li>Categorical Variables: 2</li>
 <li>Numerical variables: 8</li>
 </ul>
-<p><strong>EDA Visuals:</strong> <img src="bad_fats.png" class="img-fluid" alt="Bad Fats Compared"> <img src="good_fats.png" class="img-fluid" alt="Good Fats Compared"> <img src="kilojules.png" class="img-fluid" alt="Kilojules Compared"></p>
+</section>
+<section id="eda-visuals" class="level2">
+<h2 class="anchored" data-anchor-id="eda-visuals">EDA Visuals:</h2>
+<p><img src="bad_fats.png" class="img-fluid" alt="Bad Fats Compared"> <img src="good_fats.png" class="img-fluid" alt="Good Fats Compared"> <img src="kilojules.png" class="img-fluid" alt="Kilojules Compared"></p>
 <p><strong>Most Interesting EDA Highlights:</strong></p>
 <ul>
 <li>Margenine and Shortening Products consistently had high average amounts of trans and saturated fats (bad fats), but also had high average amounts of polyunsaturated and monounsaturated fats (good fats). Interesting that these products which are highly processed also seem to have relatively high amounts of the good fats as well</li>
 <li>Similarly, Animal fats which are not processed had high levels monounsaturated fats (good fats), but also had relatively high saturated fats (bad fats).</li>
 <li>Fish oil had the highest amount of Kilojules per 100g than any other fat or oil at over 3700Kjs. Normally, I would expect natural foods to be low calorie and thus “healthy”, but fishoil is extremely caloric notwithstanding it’s high polyunsaturated fat content (good fat)</li>
 </ul>
+</section>
 </section>
 <section id="useful-links" class="level1">
 <h1>Useful Links</h1>
@@ -816,13 +825,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu"># EDA with Fats and Oils</span></span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>**Final Dataset Information:**</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Final Dataset Information:</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Total Observations: 214</span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Categorical Variables: 2</span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Numerical variables: 8</span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>**EDA Visuals:**</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## EDA Visuals:</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="al">![Bad Fats Compared](bad_fats.png)</span></span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="al">![Good Fats Compared](good_fats.png)</span></span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="al">![Kilojules Compared](kilojules.png)</span></span>
