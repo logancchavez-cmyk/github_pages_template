@@ -27,11 +27,11 @@ Once the data was loaded, I filtered it down to only include foods from the “S
 After extracting these values into their own columns, I replaced any missing data with zeros to keep things clean. Finally, I renamed a few columns, dropped unneeded columns, and exported everything to a new CSV file called `fatandoils.csv`. The end result is a clear, structured dataset that can be used for analysis or visualization.
 
 If someone wanted to replicate this project, they’d just need to follow the process below:
-> 1. Get an API key from the their desireed website
-> 2. Install pandas and requests
-> 3. Read the key and query the API
-> 4. Load the data into a DataFrame
-> 4. Extract the needed information and export it
+1. Get an API key from the their desireed website
+2. Install pandas and requests
+3. Read the key and query the API
+4. Load the data into a DataFrame
+5. Extract the needed information and export it
 
 
 # EDA with Fats and Oils!

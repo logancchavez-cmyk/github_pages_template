@@ -157,14 +157,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../projects/final-project.html">
  <span class="dropdown-text">Final Project</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../blog.html">
- <span class="dropdown-text">Attrition Blog</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../projects/data-acquisition.html">
- <span class="dropdown-text">Data Acquisition</span></a>
-  </li>  
     </ul>
   </li>
 </ul>
@@ -293,13 +285,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To start, I stored my personal API key in a local text file called <code>api.txt</code>. This keeps the key out of my code and away from version control systems like GitHub. The script opens that file, reads the key, and uses it to make authenticated API requests. I searched the database for the phrase “Fat and Oils” and looped through the first five pages of results, saving all the returned food items into a single list. Each page of data came back as JSON, which I converted into a pandas DataFrame.</p>
 <p>Once the data was loaded, I filtered it down to only include foods from the “SR Legacy” dataset, which contains standardized reference data. I then removed columns I didn’t need, such as publication dates and brand information, to make the dataset simpler. The most important step was handling the <code>foodNutrients</code> column. Each row contained a list of nutrients stored as dictionaries, so I wrote a short function to look through that list and pull out specific nutrient values like calories, protein, saturated fat, trans fat, and sodium.</p>
 <p>After extracting these values into their own columns, I replaced any missing data with zeros to keep things clean. Finally, I renamed a few columns, dropped unneeded columns, and exported everything to a new CSV file called <code>fatandoils.csv</code>. The end result is a clear, structured dataset that can be used for analysis or visualization.</p>
-<p>If someone wanted to replicate this project, they’d just need to follow the process below: &gt; 1. Get an API key from the their desireed website &gt; 2. Install pandas and requests &gt; 3. Read the key and query the API &gt; 4. Load the data into a DataFrame &gt; 4. Extract the needed information and export it</p>
+<p>If someone wanted to replicate this project, they’d just need to follow the process below: 1. Get an API key from the their desireed website 2. Install pandas and requests 3. Read the key and query the API 4. Load the data into a DataFrame 5. Extract the needed information and export it</p>
 </section>
 <section id="eda-with-fats-and-oils" class="level1">
 <h1>EDA with Fats and Oils!</h1>
 <p><strong>Final Dataset Information:</strong> - Total Observations: 214 - Categorical Variables: 2 - Numerical variables: 8</p>
 <p><strong>EDA Visuals:</strong> <img src="bad_fats.png" class="img-fluid" alt="Bad Fats Compared"> <img src="good_fats.png" class="img-fluid" alt="Good Fats Compared"> <img src="kilojules.png" class="img-fluid" alt="Kilojules Compared"></p>
-<p><strong>Most Interesting EDA Highlights:</strong> - Margenine and Shortening Products consistently had high average amounts of trans and saturated fats (bad fats), but also had high average amounts of polyunsaturated and monounsaturated fats (good fats). Interesting that these products which are highly processed also seem to have relatively high amounts of the good fats as well - Similarly, Animal fats which are not processed had high levels monounsaturated fats (good fats), but also had relatively high saturated fats (bad fats). - Fish oil had the highest amount of Kilojules per 100g than any other fat or oil at over 3700Kjs. Normally, I would expect natural foods to be low calorie and thus “healthy”, but fishoil is extremely caloric notwithstanding it’s high polyunsaturated fat content (good fat)</p>
+<p><strong>Most Interesting EDA Highlights:</strong> - Margenine and Shortening Products consistently had high average amounts of trans and saturated fats (bad fats), but also had high average amounts of polyunsaturated and monounsaturated fats (good fats). Interesting that these products which are highly processed also seem to have relatively high amounts of the good fats as well</p>
+<ul>
+<li><p>Similarly, Animal fats which are not processed had high levels monounsaturated fats (good fats), but also had relatively high saturated fats (bad fats).</p></li>
+<li><p>Fish oil had the highest amount of Kilojules per 100g than any other fat or oil at over 3700Kjs. Normally, I would expect natural foods to be low calorie and thus “healthy”, but fishoil is extremely caloric notwithstanding it’s high polyunsaturated fat content (good fat)</p></li>
+</ul>
 </section>
 <section id="useful-links" class="level1">
 <h1>Useful Links</h1>
@@ -308,8 +304,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://fdc.nal.usda.gov/api-guide">USDA API Guide</a></li>
 <li><a href="https://github.com/logancchavez-cmyk/data-acquisition-blog">Seperate GitHub repo</a></li>
 <li><a href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/fat/art-20045550">Mayo Clinic Dietary Fat Inf</a></li>
-<li><h2 id="salt-fat-acid-heat-book" class="anchored" data-anchor-id="useful-links"><a href="https://www.saltfatacidheat.com/">Salt, Fat, Acid, Heat Book</a></h2></li>
+<li><a href="https://www.saltfatacidheat.com">Salt, Fat, Acid, Heat Book</a></li>
 </ul>
+<hr>
 
 
 <!-- -->
@@ -797,11 +794,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>After extracting these values into their own columns, I replaced any missing data with zeros to keep things clean. Finally, I renamed a few columns, dropped unneeded columns, and exported everything to a new CSV file called <span class="in">`fatandoils.csv`</span>. The end result is a clear, structured dataset that can be used for analysis or visualization.</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>If someone wanted to replicate this project, they’d just need to follow the process below:</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 1. Get an API key from the their desireed website</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 2. Install pandas and requests</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 3. Read the key and query the API</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 4. Load the data into a DataFrame</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 4. Extract the needed information and export it</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Get an API key from the their desireed website</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Install pandas and requests</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Read the key and query the API</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Load the data into a DataFrame</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Extract the needed information and export it</span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu"># EDA with Fats and Oils!</span></span>
@@ -818,16 +815,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>**Most Interesting EDA Highlights:**</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Margenine and Shortening Products consistently had high average amounts of trans and saturated fats (bad fats), but also had high average amounts of polyunsaturated and monounsaturated fats (good fats). Interesting that these products which are highly processed also seem to have relatively high amounts of the good fats as well</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Similarly, Animal fats which are not processed had high levels monounsaturated fats (good fats), but also had relatively high saturated fats (bad fats). </span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fish oil had the highest amount of Kilojules per 100g than any other fat or oil at over 3700Kjs. Normally, I would expect natural foods to be low calorie and thus "healthy", but fishoil is extremely caloric notwithstanding it's high polyunsaturated fat content (good fat)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Similarly, Animal fats which are not processed had high levels monounsaturated fats (good fats), but also had relatively high saturated fats (bad fats). </span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu"># Useful Links</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">USDA Site</span><span class="co">](https://fdc.nal.usda.gov/food-search?type=SR%20Legacy&amp;SRFoodCategory=Fats%20and%20Oils)</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">USDA API Guide</span><span class="co">](https://fdc.nal.usda.gov/api-guide)</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Seperate GitHub repo</span><span class="co">](https://github.com/logancchavez-cmyk/data-acquisition-blog)</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Mayo Clinic Dietary Fat Inf</span><span class="co">](https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/fat/art-20045550)</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Salt, Fat, Acid, Heat Book</span><span class="co">](https://www.saltfatacidheat.com/)</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>---</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fish oil had the highest amount of Kilojules per 100g than any other fat or oil at over 3700Kjs. Normally, I would expect natural foods to be low calorie and thus "healthy", but fishoil is extremely caloric notwithstanding it's high polyunsaturated fat content (good fat)</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu"># Useful Links</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">USDA Site</span><span class="co">](https://fdc.nal.usda.gov/food-search?type=SR%20Legacy&amp;SRFoodCategory=Fats%20and%20Oils)</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">USDA API Guide</span><span class="co">](https://fdc.nal.usda.gov/api-guide)</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Seperate GitHub repo</span><span class="co">](https://github.com/logancchavez-cmyk/data-acquisition-blog)</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Mayo Clinic Dietary Fat Inf</span><span class="co">](https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/fat/art-20045550)</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Salt, Fat, Acid, Heat Book</span><span class="co">](https://www.saltfatacidheat.com)</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>---</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
