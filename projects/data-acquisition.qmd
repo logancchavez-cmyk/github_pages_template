@@ -58,6 +58,6 @@ If someone wanted to replicate this project, they’d just need to follow the pr
 - [USDA API Guide](https://fdc.nal.usda.gov/api-guide)
 - [Seperate GitHub repo](https://github.com/logancchavez-cmyk/data-acquisition-blog)
 - [Mayo Clinic Dietary Fat Inf](https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/fat/art-20045550)
-- [Salt, Fat, Acid, Heat Book](https://www.saltfatacidheat.com/)
+- [Salt, Fat, Acid, Heat Book](https://www.saltfatacidheat.com)
 
 ---
