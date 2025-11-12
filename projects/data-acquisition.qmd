@@ -33,7 +33,6 @@ If someone wanted to replicate this project, they’d just need to follow the pr
 4. Load the data into a DataFrame
 5. Extract the needed information and export it
 
-
 # EDA with Fats and Oils!
 
 **Final Dataset Information:**
@@ -47,6 +46,7 @@ If someone wanted to replicate this project, they’d just need to follow the pr
 ![Kilojules Compared](kilojules.png)
 
 **Most Interesting EDA Highlights:**
+
 - Margenine and Shortening Products consistently had high average amounts of trans and saturated fats (bad fats), but also had high average amounts of polyunsaturated and monounsaturated fats (good fats). Interesting that these products which are highly processed also seem to have relatively high amounts of the good fats as well
 
 - Similarly, Animal fats which are not processed had high levels monounsaturated fats (good fats), but also had relatively high saturated fats (bad fats). 
