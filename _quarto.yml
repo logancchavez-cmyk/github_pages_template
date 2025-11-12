@@ -26,6 +26,8 @@ website:
             href: projects/final-project.qmd
           - text: "Attrition Blog"
             href: blog.qmd
+          - text: "Data Acquisition"
+            href: projects/data-acquisition.qmd
         
     right:
       - icon: github
