@@ -27,7 +27,8 @@ Once the data was loaded, I filtered it down to only include foods from the “S
 After extracting these values into their own columns, I replaced any missing data with zeros to keep things clean. Finally, I renamed a few columns, dropped unneeded columns, and exported everything to a new CSV file called `fatandoils.csv`. The end result is a clear, structured dataset that can be used for analysis or visualization.
 
 If someone wanted to replicate this project, they’d just need to follow the process below:
-1. Get an API key from the their desireed website
+
+1. Get an API key from the their desireed website 
 2. Install pandas and requests
 3. Read the key and query the API
 4. Load the data into a DataFrame
@@ -36,6 +37,7 @@ If someone wanted to replicate this project, they’d just need to follow the pr
 # EDA with Fats and Oils!
 
 **Final Dataset Information:**
+
 - Total Observations: 214
 - Categorical Variables: 2
 - Numerical variables: 8
@@ -54,6 +56,7 @@ If someone wanted to replicate this project, they’d just need to follow the pr
 - Fish oil had the highest amount of Kilojules per 100g than any other fat or oil at over 3700Kjs. Normally, I would expect natural foods to be low calorie and thus "healthy", but fishoil is extremely caloric notwithstanding it's high polyunsaturated fat content (good fat)
 
 # Useful Links
+
 - [USDA Site](https://fdc.nal.usda.gov/food-search?type=SR%20Legacy&SRFoodCategory=Fats%20and%20Oils)
 - [USDA API Guide](https://fdc.nal.usda.gov/api-guide)
 - [Seperate GitHub repo](https://github.com/logancchavez-cmyk/data-acquisition-blog)
