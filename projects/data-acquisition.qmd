@@ -1,7 +1,5 @@
 ---
 title: "Data Acquisition Project - Fats and Oils"
-author: "Logan Chavez"
-date: "2025-11-12"
 format: html
 jupyter: final_kernel
 ---
