@@ -34,7 +34,7 @@ If someone wanted to replicate this project, they’d just need to follow the pr
 4. Load the data into a DataFrame
 5. Extract the needed information and export it
 
-# EDA with Fats and Oils!
+# EDA with Fats and Oils
 
 **Final Dataset Information:**
 
